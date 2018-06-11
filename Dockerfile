@@ -6,7 +6,7 @@
 #
 # Run:      docker run -ti exoplatform/jdk version
 
-FROM  exoplatform/ubuntu:18.04
+FROM  exoplatform/ubuntu:16.04
 LABEL maintainer="eXo Platform <docker@exoplatform.com>"
 
 ENV JDK_VERSION_MAJOR 8
