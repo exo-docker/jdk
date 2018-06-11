@@ -1,5 +1,6 @@
 # Dockerizing a base images with:
 #
+#   - Ubuntu 18.04 LTS (Bionic Beaver)
 #   - Oracle JDK 8
 #
 # Build:    docker build -t exoplatform/jdk .
