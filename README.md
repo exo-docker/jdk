@@ -4,8 +4,8 @@
 
 | JDK version                | Docker tags                                               | Dockerfile                                                 |
 | -------------------------- | --------------------------------------------------------- | ---------------------------------------------------------- |
-| 8 ( 8u171 ) + Ubuntu 18.04 | `8`, `8-ubuntu`, `8-ubuntu-18`, `8-ubuntu-1804`, `latest` | *[( 8/ubuntu/18.04/Dockerfile )](./8/ubuntu/18.04/Dockerfile)* |
-| 8 ( 8u171 ) + Ubuntu 16.04 | `8-ubuntu-1604`, `8-ubuntu-16`                            | *[( 8/ubuntu/16.04/Dockerfile )](./8/ubuntu/16.04/Dockerfile)* |
+| 8 ( 8u201 ) + Ubuntu 18.04 | `8`, `8-ubuntu`, `8-ubuntu-18`, `8-ubuntu-1804`, `latest` | *[( 8/ubuntu/18.04/Dockerfile )](./8/ubuntu/18.04/Dockerfile)* |
+| 8 ( 8u201 ) + Ubuntu 16.04 | `8-ubuntu-1604`, `8-ubuntu-16`                            | *[( 8/ubuntu/16.04/Dockerfile )](./8/ubuntu/16.04/Dockerfile)* |
 
 - [Quick reference](#quick-reference)
 - [How to use this image](#how-to-use-this-image)
