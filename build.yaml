@@ -7,7 +7,10 @@ steps:
 - name: 'gcr.io/cloud-builders/docker'
   args: ['build', '-t', 'gcr.io/exo-docker/jdk:8-ubuntu-1804', '.']
   dir: '8/ubuntu/18.04'
-
+# Build the OpenJDK 8 + Ubuntu 18.04 version.
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '-t', 'gcr.io/exo-docker/jdk:openjdk-8-ubuntu-1804', '.']
+  dir: 'openjdk-8/ubuntu/18.04'
   # Add more tags
 - name: 'gcr.io/cloud-builders/docker'
   args: ['tag', 'gcr.io/$PROJECT_ID/jdk:8-ubuntu-1604', 'gcr.io/$PROJECT_ID/jdk:8-ubuntu-16']
@@ -19,6 +22,15 @@ steps:
   args: ['tag', 'gcr.io/$PROJECT_ID/jdk:8-ubuntu-1804', 'gcr.io/$PROJECT_ID/jdk:8']
 - name: 'gcr.io/cloud-builders/docker'
   args: ['tag', 'gcr.io/$PROJECT_ID/jdk:8-ubuntu-1804', 'gcr.io/$PROJECT_ID/jdk:latest']
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['tag', 'gcr.io/$PROJECT_ID/jdk:openjdk-8-ubuntu-1804', 'gcr.io/$PROJECT_ID/jdk:openjdk-8']
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['tag', 'gcr.io/$PROJECT_ID/jdk:openjdk-8-ubuntu-1804', 'gcr.io/$PROJECT_ID/jdk:openjdk-8-ubuntu']
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['tag', 'gcr.io/$PROJECT_ID/jdk:openjdk-8-ubuntu-1804', 'gcr.io/$PROJECT_ID/jdk:openjdk-8-ubuntu-18']
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['tag', 'gcr.io/$PROJECT_ID/jdk:openjdk-8-ubuntu-1804', 'gcr.io/$PROJECT_ID/jdk:openjdk-8-ubuntu-1804']
+  
 
 # store images
 images: 
@@ -28,4 +40,8 @@ images:
 - 'gcr.io/exo-docker/jdk:8-ubuntu-18'
 - 'gcr.io/exo-docker/jdk:8-ubuntu'
 - 'gcr.io/exo-docker/jdk:8'
+- 'gcr.io/exo-docker/jdk:openjdk-8-ubuntu-1804'
+- 'gcr.io/exo-docker/jdk:openjdk-8-ubuntu-18'
+- 'gcr.io/exo-docker/jdk:openjdk-8-ubuntu'
+- 'gcr.io/exo-docker/jdk:openjdk-8'
 - 'gcr.io/exo-docker/jdk:latest'
