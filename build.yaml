@@ -30,6 +30,14 @@ steps:
   args: ['tag', 'gcr.io/$PROJECT_ID/jdk:openjdk-8-ubuntu-1804', 'gcr.io/$PROJECT_ID/jdk:openjdk-8-ubuntu-18']
 - name: 'gcr.io/cloud-builders/docker'
   args: ['tag', 'gcr.io/$PROJECT_ID/jdk:openjdk-8-ubuntu-1804', 'gcr.io/$PROJECT_ID/jdk:openjdk-8-ubuntu-1804']
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['tag', 'gcr.io/$PROJECT_ID/jdk:openjdk-11-ubuntu-1804', 'gcr.io/$PROJECT_ID/jdk:openjdk-11']
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['tag', 'gcr.io/$PROJECT_ID/jdk:openjdk-11-ubuntu-1804', 'gcr.io/$PROJECT_ID/jdk:openjdk-11-ubuntu']
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['tag', 'gcr.io/$PROJECT_ID/jdk:openjdk-11-ubuntu-1804', 'gcr.io/$PROJECT_ID/jdk:openjdk-11-ubuntu-18']
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['tag', 'gcr.io/$PROJECT_ID/jdk:openjdk-11-ubuntu-1804', 'gcr.io/$PROJECT_ID/jdk:openjdk-11-ubuntu-1804']
   
 
 # store images
@@ -44,4 +52,8 @@ images:
 - 'gcr.io/exo-docker/jdk:openjdk-8-ubuntu-18'
 - 'gcr.io/exo-docker/jdk:openjdk-8-ubuntu'
 - 'gcr.io/exo-docker/jdk:openjdk-8'
+- 'gcr.io/exo-docker/jdk:openjdk-11-ubuntu-1804'
+- 'gcr.io/exo-docker/jdk:openjdk-11-ubuntu-18'
+- 'gcr.io/exo-docker/jdk:openjdk-11-ubuntu'
+- 'gcr.io/exo-docker/jdk:openjdk-11'
 - 'gcr.io/exo-docker/jdk:latest'

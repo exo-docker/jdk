@@ -10,10 +10,15 @@ steps:
 # Build the OpenJDK 8 + Ubuntu 18.04 version.
 - name: 'gcr.io/cloud-builders/docker'
   args: ['build', '-t', 'gcr.io/exo-docker/jdk:openjdk-8-ubuntu-1804_develop', '.']
-  dir: 'openjdk-8/ubuntu/18.04'  
+  dir: 'openjdk-8/ubuntu/18.04' 
+# Build the OpenJDK 11 + Ubuntu 18.04 version.
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '-t', 'gcr.io/exo-docker/jdk:openjdk-11-ubuntu-1804_develop', '.']
+  dir: 'openjdk-8/ubuntu/18.04' 
 
 # store images
 images: 
 - 'gcr.io/exo-docker/jdk:8-ubuntu-1604_develop'
 - 'gcr.io/exo-docker/jdk:8-ubuntu-1804_develop'
 - 'gcr.io/exo-docker/jdk:openjdk-8-ubuntu-1804_develop'
+- 'gcr.io/exo-docker/jdk:openjdk-11-ubuntu-1804_develop'
