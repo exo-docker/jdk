@@ -22,7 +22,7 @@ RUN mkdir -p "${JVM_DIR}"
 RUN wget -q --no-cookies --no-check-certificate \
   -O "${DOWNLOAD_DIR}/openjdk-${JDK_VERSION}_linux-x64_bin.tar.gz" "${JDK_DOWNLOAD}" \
   && cd "${JVM_DIR}" \
-  && tar --no-same-owner -xvf "${DOWNLOAD_DIR}/openjdk-${JDK_VERSION}_linux-x64_bin.tar.gz" \
+  && tar --no-same-owner -xzf "${DOWNLOAD_DIR}/openjdk-${JDK_VERSION}_linux-x64_bin.tar.gz" \
   && rm -f "${DOWNLOAD_DIR}/openjdk-${JDK_VERSION}_linux-x64_bin.tar.gz" \
   && mv "${JVM_DIR}/jdk-${JDK_VERSION}" "${JVM_DIR}/java-${JDK_VERSION}-openjdk-x64" \
   && ln -s "${JVM_DIR}/java-${JDK_VERSION}-openjdk-x64" "${JVM_DIR}/java-${JDK_VERSION_MAJOR}-openjdk-x64"
