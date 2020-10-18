@@ -4,9 +4,12 @@
 
 | JDK version                             | Docker tags                                                                         | Dockerfile                                                                       |
 |-----------------------------------------|-------------------------------------------------------------------------------------|----------------------------------------------------------------------------------|
+| openjdk-11 ( 11.0.8 ) + Ubuntu 20.04 | `openjdk-11`, `openjdk-11-ubuntu`, `openjdk-11-ubuntu-18`, `openjdk-11-ubuntu-2004`    | *[( openjdk-11/ubuntu/20.04/Dockerfile )](./openjdk-11/ubuntu/20.04/Dockerfile)* |
+| 8 ( 8u261 ) + Ubuntu 20.04              | `8`, `8-ubuntu`, `8-ubuntu-18`, `8-ubuntu-2004`, `latest`                           | *[( 8/ubuntu/20.04/Dockerfile )](./8/ubuntu/18.04/Dockerfile)*    
 | openjdk-11 ( 11.0.7+10 ) + Ubuntu 18.04 | `openjdk-11`, `openjdk-11-ubuntu`, `openjdk-11-ubuntu-18`, `openjdk-11-ubuntu-1804` | *[( openjdk-11/ubuntu/18.04/Dockerfile )](./openjdk-11/ubuntu/18.04/Dockerfile)* |
 | 8 ( 8u201 ) + Ubuntu 18.04              | `8`, `8-ubuntu`, `8-ubuntu-18`, `8-ubuntu-1804`, `latest`                           | *[( 8/ubuntu/18.04/Dockerfile )](./8/ubuntu/18.04/Dockerfile)*                   |
-| 8 ( 8u201 ) + Ubuntu 16.04              | `8-ubuntu-1604`, `8-ubuntu-16`                                                      | *[( 8/ubuntu/16.04/Dockerfile )](./8/ubuntu/16.04/Dockerfile)*                   |
+| 8 ( 8u201 ) + Ubuntu 16.04              | `8-ubuntu-1604`, `8-ubuntu-16`                                                      | *[( 8/ubuntu/16.04/Dockerfile )](./8/ubuntu/16.04/Dockerfile)*     
+| openjdk-8( 8u265b01 ) + Ubuntu 20.04    | `openjdk-8`, `openjdk-8-ubuntu`, `openjdk-8-ubuntu-20`, `openjdk-8-ubuntu-2004`     | *[( openjdk-8/ubuntu/20.04/Dockerfile )](./openjdk-8/ubuntu/20.04/Dockerfile)*   |
 | openjdk-8( 8u222b10 ) + Ubuntu 18.04    | `openjdk-8`, `openjdk-8-ubuntu`, `openjdk-8-ubuntu-18`, `openjdk-8-ubuntu-1804`     | *[( openjdk-8/ubuntu/18.04/Dockerfile )](./openjdk-8/ubuntu/18.04/Dockerfile)*   |
 | 8 ( 8u201 ) + Ubuntu 18.04              | `8`, `8-ubuntu`, `8-ubuntu-18`, `8-ubuntu-1804`, `latest`                           | *[( 8/ubuntu/18.04/Dockerfile )](./8/ubuntu/18.04/Dockerfile)*                   |
 | 8 ( 8u201 ) + Ubuntu 16.04              | `8-ubuntu-1604`, `8-ubuntu-16`                                                      | *[( 8/ubuntu/16.04/Dockerfile )](./8/ubuntu/16.04/Dockerfile)*                   |
