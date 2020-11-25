@@ -4,7 +4,8 @@
 
 | JDK version                             | Docker tags                                                                         | Dockerfile                                                                       |
 |-----------------------------------------|-------------------------------------------------------------------------------------|----------------------------------------------------------------------------------|
-| openjdk-11 ( 11.0.8 ) + Ubuntu 20.04 | `openjdk-11`, `openjdk-11-ubuntu`, `openjdk-11-ubuntu-18`, `openjdk-11-ubuntu-2004`    | *[( openjdk-11/ubuntu/20.04/Dockerfile )](./openjdk-11/ubuntu/20.04/Dockerfile)* |
+| openjdk-14 ( 14.0.2 ) + Ubuntu 20.04 | `openjdk-14`, `openjdk-14-ubuntu`, `openjdk-14-ubuntu-20`, `openjdk-14-ubuntu-2004`    | *[( openjdk-14/ubuntu/20.04/Dockerfile )](./openjdk-14/ubuntu/20.04/Dockerfile)* |
+| openjdk-11 ( 11.0.8 ) + Ubuntu 20.04 | `openjdk-11`, `openjdk-11-ubuntu`, `openjdk-11-ubuntu-20`, `openjdk-11-ubuntu-2004`    | *[( openjdk-11/ubuntu/20.04/Dockerfile )](./openjdk-11/ubuntu/20.04/Dockerfile)* |
 | 8 ( 8u261 ) + Ubuntu 20.04              | `8`, `8-ubuntu`, `8-ubuntu-18`, `8-ubuntu-2004`, `latest`                           | *[( 8/ubuntu/20.04/Dockerfile )](./8/ubuntu/18.04/Dockerfile)*    
 | openjdk-11 ( 11.0.7+10 ) + Ubuntu 18.04 | `openjdk-11`, `openjdk-11-ubuntu`, `openjdk-11-ubuntu-18`, `openjdk-11-ubuntu-1804` | *[( openjdk-11/ubuntu/18.04/Dockerfile )](./openjdk-11/ubuntu/18.04/Dockerfile)* |
 | 8 ( 8u201 ) + Ubuntu 18.04              | `8`, `8-ubuntu`, `8-ubuntu-18`, `8-ubuntu-1804`, `latest`                           | *[( 8/ubuntu/18.04/Dockerfile )](./8/ubuntu/18.04/Dockerfile)*                   |
