@@ -5,10 +5,8 @@ section=main
 
 hl java /usr/lib/jvm/java-14-openjdk-x64/bin/java
 hl keytool /usr/lib/jvm/java-14-openjdk-x64/bin/keytool
-hl pack200 /usr/lib/jvm/java-14-openjdk-x64/bin/pack200
 hl rmid /usr/lib/jvm/java-14-openjdk-x64/bin/rmid
 hl rmiregistry /usr/lib/jvm/java-14-openjdk-x64/bin/rmiregistry
-hl unpack200 /usr/lib/jvm/java-14-openjdk-x64/bin/unpack200
 hl jexec /usr/lib/jvm/java-14-openjdk-x64/lib/jexec
 jdk jaotc /usr/lib/jvm/java-14-openjdk-x64/bin/jaotc
 jdk jar /usr/lib/jvm/java-14-openjdk-x64/bin/jar
