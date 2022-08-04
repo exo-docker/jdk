@@ -1,22 +1,22 @@
 # Dockerizing a base images with:
 #
-#   - Ubuntu 20.04 LTS (Focal Fossa)
-#   - OpenJDK 17
+#   - Ubuntu 22.04 LTS (Jammy Jellyfish)
+#   - OpenJDK 14
 #
-# Build:    docker build -t exoplatform/jdk:openjdk-17 .
+# Build:    docker build -t exoplatform/jdk:openjdk-14 .
 #
-# Run:      docker run -ti exoplatform/jdk:openjdk-17 -version
+# Run:      docker run -ti exoplatform/jdk:openjdk-14 -version
 
-FROM  exoplatform/ubuntu:20.04
+FROM  exoplatform/ubuntu:22.04
 LABEL maintainer="eXo Platform <docker@exoplatform.com>"
 
-ENV JDK_VERSION 17.0.2
-ENV JDK_MAJOR_VERSION 17
+ENV JDK_VERSION 14.0.2
+ENV JDK_MAJOR_VERSION 14
 
 ENV JDK_DOWNLOAD http://storage.exoplatform.org/public/java/jdk/openjdk/${JDK_VERSION}/openjdk-${JDK_VERSION}_linux-x64_bin.tar.gz
 
 
-# Install OpenJDK Java 17 SDK
+# Install OpenJDK Java 14 SDK
 ENV JVM_DIR /usr/lib/jvm
 RUN mkdir -p "${JVM_DIR}"
 

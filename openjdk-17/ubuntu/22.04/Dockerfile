@@ -1,13 +1,13 @@
 # Dockerizing a base images with:
 #
-#   - Ubuntu 20.04 LTS (Focal Fossa)
+#   - Ubuntu 22.04 LTS (Jammy Jellyfish)
 #   - OpenJDK 17
 #
 # Build:    docker build -t exoplatform/jdk:openjdk-17 .
 #
 # Run:      docker run -ti exoplatform/jdk:openjdk-17 -version
 
-FROM  exoplatform/ubuntu:20.04
+FROM  exoplatform/ubuntu:22.04
 LABEL maintainer="eXo Platform <docker@exoplatform.com>"
 
 ENV JDK_VERSION 17.0.2

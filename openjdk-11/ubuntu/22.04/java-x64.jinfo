@@ -1,5 +1,5 @@
 name=java-11-openjdk-x64
-alias=java-11.0.11-openjdk-x64
+alias=java-11.0.16-openjdk-x64
 priority=30
 section=main
 
