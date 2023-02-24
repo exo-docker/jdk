@@ -1,23 +1,23 @@
 # Dockerizing a base images with:
 #
-#   - Ubuntu 20.04 LTS (Focal Fossa)
-#   - OpenJDK 17
+#   - Ubuntu 22.04 LTS (Jammy Jellyfish)
+#   - OpenJDK 19
 #
-# Build:    docker build -t exoplatform/jdk:openjdk-17 .
+# Build:    docker build -t exoplatform/jdk:openjdk-19 .
 #
-# Run:      docker run -ti exoplatform/jdk:openjdk-17 -version
+# Run:      docker run -ti exoplatform/jdk:openjdk-19 -version
 
-FROM  exoplatform/ubuntu:20.04
+FROM  exoplatform/ubuntu:22.04
 LABEL maintainer="eXo Platform <docker@exoplatform.com>"
 
-ENV JDK_VERSION 17.0.6
-ENV JDK_MAJOR_VERSION 17
-ENV TEMURIN_SUFFIX 10
+ENV JDK_VERSION 19.0.2
+ENV JDK_MAJOR_VERSION 19
+ENV TEMURIN_SUFFIX 7
 
 ENV JDK_DOWNLOAD http://storage.exoplatform.org/public/java/jdk/openjdk/${JDK_VERSION}/openjdk-${JDK_VERSION}_linux-x64_bin.tar.gz
 
 
-# Install OpenJDK Java 17 SDK
+# Install OpenJDK Java 19 SDK
 ENV JVM_DIR /usr/lib/jvm
 RUN mkdir -p "${JVM_DIR}"
 

@@ -1,5 +1,5 @@
 name=java-17-openjdk-x64
-alias=java-17.0.2-openjdk-x64
+alias=java-17.0.6-openjdk-x64
 priority=30
 section=main
 
