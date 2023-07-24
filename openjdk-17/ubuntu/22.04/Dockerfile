@@ -10,7 +10,7 @@
 FROM  exoplatform/ubuntu:22.04
 LABEL maintainer="eXo Platform <docker@exoplatform.com>"
 
-ENV JDK_VERSION 17.0.7
+ENV JDK_VERSION 17.0.8
 ENV JDK_MAJOR_VERSION 17
 ENV TEMURIN_SUFFIX 7
 
