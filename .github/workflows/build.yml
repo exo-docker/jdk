@@ -40,14 +40,10 @@ jobs:
             context: openjdk-11/ubuntu/22.04
           - imageTag: 11-ubuntu-2204
             context: openjdk-11/ubuntu/22.04
-          - imageTag: 11-ubuntu-2204
-            context: openjdk-11/ubuntu/22.04
           - imageTag: openjdk-11-ubuntu-2204
             context: openjdk-11/ubuntu/22.04
           ## Ubuntu 20.04
           - imageTag: 11-ubuntu-20
-            context: openjdk-11/ubuntu/20.04
-          - imageTag: 11-ubuntu-2004
             context: openjdk-11/ubuntu/20.04
           - imageTag: 11-ubuntu-2004
             context: openjdk-11/ubuntu/20.04
@@ -63,13 +59,9 @@ jobs:
             context: openjdk-14/ubuntu/22.04
           - imageTag: 14-ubuntu-2204
             context: openjdk-14/ubuntu/22.04
-          - imageTag: 14-ubuntu-2204
-            context: openjdk-14/ubuntu/22.04
           - imageTag: openjdk-14-ubuntu-2204
             context: openjdk-14/ubuntu/22.04
           ## Ubuntu 20.04
-          - imageTag: 14-ubuntu-2004
-            context: openjdk-14/ubuntu/20.04
           - imageTag: 14-ubuntu-20
             context: openjdk-14/ubuntu/20.04
           - imageTag: 14-ubuntu-2004
@@ -82,14 +74,14 @@ jobs:
             context: openjdk-17/ubuntu/22.04
           - imageTag: 17-ubuntu
             context: openjdk-17/ubuntu/22.04
-          - imageTag: 17-ubuntu-2204
+          - imageTag: 17-ubuntu-22
             context: openjdk-17/ubuntu/22.04
           - imageTag: 17-ubuntu-2204
             context: openjdk-17/ubuntu/22.04
           - imageTag: openjdk-17-ubuntu-2204
             context: openjdk-17/ubuntu/22.04
           ## Ubuntu 20.04
-          - imageTag: 17-ubuntu-2004
+          - imageTag: 17-ubuntu-20
             context: openjdk-17/ubuntu/20.04
           - imageTag: 17-ubuntu-2004
             context: openjdk-17/ubuntu/20.04
@@ -101,7 +93,7 @@ jobs:
             context: openjdk-21/ubuntu/22.04
           - imageTag: 21-ubuntu
             context: openjdk-21/ubuntu/22.04
-          - imageTag: 21-ubuntu-2204
+          - imageTag: 21-ubuntu-22
             context: openjdk-21/ubuntu/22.04
           - imageTag: 21-ubuntu-2204
             context: openjdk-21/ubuntu/22.04
