@@ -1,7 +1,7 @@
 name: Build & publish eXo JDK images
 on:
   schedule:
-    - cron:  '0 22 * * 6' # Every Saturday at 9 PM UTC
+    - cron:  '0 22 * * 6' # Every Saturday at 10 PM UTC
   workflow_dispatch:
 
 jobs:
