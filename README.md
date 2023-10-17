@@ -1,4 +1,5 @@
 # exoplatform/jdk Docker image <!-- omit in toc -->
+[![Build & publish eXo JDK images](https://github.com/exo-docker/jdk/actions/workflows/build.yml/badge.svg)](https://github.com/exo-docker/jdk/actions/workflows/build.yml)
 
 ## Supported tags and respective `Dockerfile` links <!-- omit in toc -->
 
