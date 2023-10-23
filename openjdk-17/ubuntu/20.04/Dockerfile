@@ -10,9 +10,9 @@
 FROM  exoplatform/ubuntu:20.04
 LABEL maintainer="eXo Platform <docker@exoplatform.com>"
 
-ENV JDK_VERSION 17.0.8
+ENV JDK_VERSION 17.0.9
 ENV JDK_MAJOR_VERSION 17
-ENV TEMURIN_SUFFIX 7
+ENV TEMURIN_SUFFIX 9
 
 ENV JDK_DOWNLOAD http://storage.exoplatform.org/public/java/jdk/openjdk/${JDK_VERSION}/openjdk-${JDK_VERSION}_linux-x64_bin.tar.gz
 
