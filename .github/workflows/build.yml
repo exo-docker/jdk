@@ -14,6 +14,7 @@ jobs:
           ### Latest (on JDK and os-release)
           - imageTag: latest
             context: openjdk-21/ubuntu/22.04
+          # JDK 21
           ## Latest Ubuntu (without os-release on tag)
           - imageTag: 21
             context: openjdk-21/ubuntu/22.04
@@ -23,7 +24,6 @@ jobs:
             context: openjdk-21/ubuntu/22.04
           - imageTag: openjdk-21-ubuntu
             context: openjdk-21/ubuntu/22.04
-          # JDK 21
           ## Ubuntu 22.04
           - imageTag: 21-ubuntu-22
             context: openjdk-21/ubuntu/22.04
