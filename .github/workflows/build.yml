@@ -11,128 +11,44 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          ### Latest (on JDK and os-release)
-          - imageTag: latest
-            context: openjdk-21/ubuntu/22.04
           # JDK 21
-          ## Latest Ubuntu (without os-release on tag)
-          - imageTag: 21
-            context: openjdk-21/ubuntu/22.04
-          - imageTag: 21-ubuntu
-            context: openjdk-21/ubuntu/22.04
-          - imageTag: openjdk-21
-            context: openjdk-21/ubuntu/22.04
-          - imageTag: openjdk-21-ubuntu
-            context: openjdk-21/ubuntu/22.04
-          ## Ubuntu 22.04
-          - imageTag: 21-ubuntu-22
-            context: openjdk-21/ubuntu/22.04
-          - imageTag: 21-ubuntu-2204
-            context: openjdk-21/ubuntu/22.04
-          - imageTag: openjdk-21-ubuntu-2204
-            context: openjdk-21/ubuntu/22.04
+          ## Ubuntu 22.04 (latest)
+          - context: openjdk-21/ubuntu/22.04
+            imageTag: latest,21,21-ubuntu,openjdk-21,openjdk-21-ubuntu,21-ubuntu-22,21-ubuntu-2204
           # JDK 17
-          ## Latest Ubuntu (without os-release on tag)
-          - imageTag: 17
-            context: openjdk-17/ubuntu/22.04
-          - imageTag: 17-ubuntu
-            context: openjdk-17/ubuntu/22.04
-          - imageTag: openjdk-17
-            context: openjdk-17/ubuntu/22.04
-          - imageTag: openjdk-17-ubuntu
-            context: openjdk-17/ubuntu/22.04
           ## Ubuntu 22.04
-          - imageTag: 17-ubuntu-22
-            context: openjdk-17/ubuntu/22.04
-          - imageTag: 17-ubuntu-2204
-            context: openjdk-17/ubuntu/22.04
-          - imageTag: openjdk-17-ubuntu-2204
-            context: openjdk-17/ubuntu/22.04
+          - context: openjdk-17/ubuntu/22.04
+            imageTag: 17,17-ubuntu,openjdk-17,openjdk-17-ubuntu,17-ubuntu-22,17-ubuntu-2204,openjdk-17-ubuntu-2204
           ## Ubuntu 20.04
-          - imageTag: 17-ubuntu-20
-            context: openjdk-17/ubuntu/20.04
-          - imageTag: 17-ubuntu-2004
-            context: openjdk-17/ubuntu/20.04
-          - imageTag: openjdk-17-ubuntu-2004
-            context: openjdk-17/ubuntu/20.04
+          - context: openjdk-17/ubuntu/20.04
+            imageTag: 17-ubuntu-20,17-ubuntu-2004,openjdk-17-ubuntu-2004
           # JDK 14
-          ## Latest Ubuntu (without os-release on tag)
-          - imageTag: 14
-            context: openjdk-14/ubuntu/22.04
-          - imageTag: 14-ubuntu
-            context: openjdk-14/ubuntu/22.04
-          - imageTag: openjdk-14
-            context: openjdk-14/ubuntu/22.04
-          - imageTag: openjdk-14-ubuntu
-            context: openjdk-14/ubuntu/22.04
           ## Ubuntu 22.04
-          - imageTag: 14-ubuntu-22
-            context: openjdk-14/ubuntu/22.04
-          - imageTag: 14-ubuntu-2204
-            context: openjdk-14/ubuntu/22.04
-          - imageTag: openjdk-14-ubuntu-2204
-            context: openjdk-14/ubuntu/22.04
+          - context: openjdk-14/ubuntu/22.04
+            imageTag: 14,14-ubuntu,openjdk-14,openjdk-14-ubuntu,14-ubuntu-22,14-ubuntu-2204,openjdk-14-ubuntu-2204
           ## Ubuntu 20.04
-          - imageTag: 14-ubuntu-20
-            context: openjdk-14/ubuntu/20.04
-          - imageTag: 14-ubuntu-2004
-            context: openjdk-14/ubuntu/20.04
-          - imageTag: openjdk-14-ubuntu-2004
-            context: openjdk-14/ubuntu/20.04
+          - context: openjdk-14/ubuntu/20.04
+            imageTag: 14-ubuntu-20,14-ubuntu-2004,openjdk-14-ubuntu-2004
           # JDK 11
-          ## Latest Ubuntu (without os-release on tag)
-          - imageTag: 11
-            context: openjdk-11/ubuntu/22.04
-          - imageTag: 11-ubuntu
-            context: openjdk-11/ubuntu/22.04
-          - imageTag: openjdk-11
-            context: openjdk-11/ubuntu/22.04
-          - imageTag: openjdk-11-ubuntu
-            context: openjdk-11/ubuntu/22.04
           ## Ubuntu 22.04
-          - imageTag: 11-ubuntu-22
-            context: openjdk-11/ubuntu/22.04
-          - imageTag: 11-ubuntu-2204
-            context: openjdk-11/ubuntu/22.04
-          - imageTag: openjdk-11-ubuntu-2204
-            context: openjdk-11/ubuntu/22.04
+          - context: openjdk-11/ubuntu/22.04
+            imageTag: 11,11-ubuntu,openjdk-11,openjdk-11-ubuntu,11-ubuntu-22,11-ubuntu-2204,openjdk-11-ubuntu-2204
           ## Ubuntu 20.04
-          - imageTag: 11-ubuntu-20
-            context: openjdk-11/ubuntu/20.04
-          - imageTag: 11-ubuntu-2004
-            context: openjdk-11/ubuntu/20.04
-          - imageTag: openjdk-11-ubuntu-2004
-            context: openjdk-11/ubuntu/20.04
+          - context: openjdk-11/ubuntu/20.04
+            imageTag: 11-ubuntu-20,11-ubuntu-2004,openjdk-11-ubuntu-2004
           # JDK 8
-          ## Latest Ubuntu (without os-release on tag)
-          - imageTag: 8
-            context: openjdk-8/ubuntu/22.04
-          - imageTag: 8-ubuntu
-            context: openjdk-8/ubuntu/22.04
-          - imageTag: openjdk-8
-            context: openjdk-8/ubuntu/22.04
-          - imageTag: openjdk-8-ubuntu
-            context: openjdk-8/ubuntu/22.04
           ## Ubuntu 22.04
-          - imageTag: 8-ubuntu-22
-            context: openjdk-8/ubuntu/22.04
-          - imageTag: 8-ubuntu-2204
-            context: openjdk-8/ubuntu/22.04
-          - imageTag: openjdk-8-ubuntu-2204
-            context: openjdk-8/ubuntu/22.04
+          - context: openjdk-8/ubuntu/22.04
+            imageTag: 8,8-ubuntu,openjdk-8,openjdk-8-ubuntu,8-ubuntu-22,8-ubuntu-2204,openjdk-8-ubuntu-2204
           ## Ubuntu 20.04
-          - imageTag: 8-ubuntu-20
-            context: openjdk-8/ubuntu/20.04
-          - imageTag: 8-ubuntu-2004
-            context: openjdk-8/ubuntu/20.04
-          - imageTag: openjdk-8-ubuntu-2004
-            context: openjdk-8/ubuntu/20.04
+          - context: openjdk-8/ubuntu/20.04
+            imageTag: 8-ubuntu-20,8-ubuntu-2004,openjdk-8-ubuntu-2004
 
     uses: exoplatform/swf-scripts/.github/workflows/buildDockerImage.yml@master
     with:
       dockerImage: "exoplatform/jdk"
-      dockerImageTag: ${{ matrix.imageTag }}
       dockerFileContext: ${{ matrix.context }}
+      dockerImageTag: ${{ matrix.imageTag }}
       signImage: true
     secrets:
       DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
