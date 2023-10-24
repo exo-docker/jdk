@@ -1,7 +1,7 @@
 name: Build & publish eXo JDK images
 on:
   schedule:
-    - cron:  '0 22 * * 6' # Every Saturday at 10 PM UTC
+    - cron: "0 22 * * 6" # Every Saturday at 10 PM UTC
   workflow_dispatch:
 
 jobs:
@@ -11,69 +11,37 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          # JDK 8
+          ### Latest (on JDK and os-release)
+          - imageTag: latest
+            context: openjdk-21/ubuntu/22.04
+          ## Latest Ubuntu (without os-release on tag)
+          - imageTag: 21
+            context: openjdk-21/ubuntu/22.04
+          - imageTag: 21-ubuntu
+            context: openjdk-21/ubuntu/22.04
+          - imageTag: openjdk-21
+            context: openjdk-21/ubuntu/22.04
+          - imageTag: openjdk-21-ubuntu
+            context: openjdk-21/ubuntu/22.04
+          # JDK 21
           ## Ubuntu 22.04
-          - imageTag: 8
-            context: openjdk-8/ubuntu/22.04
-          - imageTag: 8-ubuntu
-            context: openjdk-8/ubuntu/22.04
-          - imageTag: 8-ubuntu-22
-            context: openjdk-8/ubuntu/22.04
-          - imageTag: 8-ubuntu-2204
-            context: openjdk-8/ubuntu/22.04
-          - imageTag: openjdk-8-ubuntu-2204
-            context: openjdk-8/ubuntu/22.04
-          ## Ubuntu 20.04
-          - imageTag: 8-ubuntu-20
-            context: openjdk-8/ubuntu/20.04
-          - imageTag: 8-ubuntu-2004
-            context: openjdk-8/ubuntu/20.04
-          - imageTag: openjdk-8-ubuntu-2004
-            context: openjdk-8/ubuntu/20.04
-          # JDK 11
-          ## Ubuntu 22.04
-          - imageTag: 11
-            context: openjdk-11/ubuntu/22.04
-          - imageTag: 11-ubuntu
-            context: openjdk-11/ubuntu/22.04
-          - imageTag: 11-ubuntu-22
-            context: openjdk-11/ubuntu/22.04
-          - imageTag: 11-ubuntu-2204
-            context: openjdk-11/ubuntu/22.04
-          - imageTag: openjdk-11-ubuntu-2204
-            context: openjdk-11/ubuntu/22.04
-          ## Ubuntu 20.04
-          - imageTag: 11-ubuntu-20
-            context: openjdk-11/ubuntu/20.04
-          - imageTag: 11-ubuntu-2004
-            context: openjdk-11/ubuntu/20.04
-          - imageTag: openjdk-11-ubuntu-2004
-            context: openjdk-11/ubuntu/20.04
-          # JDK 14
-          ## Ubuntu 22.04
-          - imageTag: 14
-            context: openjdk-14/ubuntu/22.04
-          - imageTag: 14-ubuntu
-            context: openjdk-14/ubuntu/22.04
-          - imageTag: 14-ubuntu-22
-            context: openjdk-14/ubuntu/22.04
-          - imageTag: 14-ubuntu-2204
-            context: openjdk-14/ubuntu/22.04
-          - imageTag: openjdk-14-ubuntu-2204
-            context: openjdk-14/ubuntu/22.04
-          ## Ubuntu 20.04
-          - imageTag: 14-ubuntu-20
-            context: openjdk-14/ubuntu/20.04
-          - imageTag: 14-ubuntu-2004
-            context: openjdk-14/ubuntu/20.04
-          - imageTag: openjdk-14-ubuntu-2004
-            context: openjdk-14/ubuntu/20.04
+          - imageTag: 21-ubuntu-22
+            context: openjdk-21/ubuntu/22.04
+          - imageTag: 21-ubuntu-2204
+            context: openjdk-21/ubuntu/22.04
+          - imageTag: openjdk-21-ubuntu-2204
+            context: openjdk-21/ubuntu/22.04
           # JDK 17
-          ## Ubuntu 22.04
+          ## Latest Ubuntu (without os-release on tag)
           - imageTag: 17
             context: openjdk-17/ubuntu/22.04
           - imageTag: 17-ubuntu
             context: openjdk-17/ubuntu/22.04
+          - imageTag: openjdk-17
+            context: openjdk-17/ubuntu/22.04
+          - imageTag: openjdk-17-ubuntu
+            context: openjdk-17/ubuntu/22.04
+          ## Ubuntu 22.04
           - imageTag: 17-ubuntu-22
             context: openjdk-17/ubuntu/22.04
           - imageTag: 17-ubuntu-2204
@@ -87,21 +55,78 @@ jobs:
             context: openjdk-17/ubuntu/20.04
           - imageTag: openjdk-17-ubuntu-2004
             context: openjdk-17/ubuntu/20.04
-          # JDK 21
+          # JDK 14
+          ## Latest Ubuntu (without os-release on tag)
+          - imageTag: 14
+            context: openjdk-14/ubuntu/22.04
+          - imageTag: 14-ubuntu
+            context: openjdk-14/ubuntu/22.04
+          - imageTag: openjdk-14
+            context: openjdk-14/ubuntu/22.04
+          - imageTag: openjdk-14-ubuntu
+            context: openjdk-14/ubuntu/22.04
           ## Ubuntu 22.04
-          - imageTag: 21
-            context: openjdk-21/ubuntu/22.04
-          - imageTag: 21-ubuntu
-            context: openjdk-21/ubuntu/22.04
-          - imageTag: 21-ubuntu-22
-            context: openjdk-21/ubuntu/22.04
-          - imageTag: 21-ubuntu-2204
-            context: openjdk-21/ubuntu/22.04
-          - imageTag: openjdk-21-ubuntu-2204
-            context: openjdk-21/ubuntu/22.04
-          ### Latest
-          - imageTag: latest
-            context: openjdk-21/ubuntu/22.04
+          - imageTag: 14-ubuntu-22
+            context: openjdk-14/ubuntu/22.04
+          - imageTag: 14-ubuntu-2204
+            context: openjdk-14/ubuntu/22.04
+          - imageTag: openjdk-14-ubuntu-2204
+            context: openjdk-14/ubuntu/22.04
+          ## Ubuntu 20.04
+          - imageTag: 14-ubuntu-20
+            context: openjdk-14/ubuntu/20.04
+          - imageTag: 14-ubuntu-2004
+            context: openjdk-14/ubuntu/20.04
+          - imageTag: openjdk-14-ubuntu-2004
+            context: openjdk-14/ubuntu/20.04
+          # JDK 11
+          ## Latest Ubuntu (without os-release on tag)
+          - imageTag: 11
+            context: openjdk-11/ubuntu/22.04
+          - imageTag: 11-ubuntu
+            context: openjdk-11/ubuntu/22.04
+          - imageTag: openjdk-11
+            context: openjdk-11/ubuntu/22.04
+          - imageTag: openjdk-11-ubuntu
+            context: openjdk-11/ubuntu/22.04
+          ## Ubuntu 22.04
+          - imageTag: 11-ubuntu-22
+            context: openjdk-11/ubuntu/22.04
+          - imageTag: 11-ubuntu-2204
+            context: openjdk-11/ubuntu/22.04
+          - imageTag: openjdk-11-ubuntu-2204
+            context: openjdk-11/ubuntu/22.04
+          ## Ubuntu 20.04
+          - imageTag: 11-ubuntu-20
+            context: openjdk-11/ubuntu/20.04
+          - imageTag: 11-ubuntu-2004
+            context: openjdk-11/ubuntu/20.04
+          - imageTag: openjdk-11-ubuntu-2004
+            context: openjdk-11/ubuntu/20.04
+          # JDK 8
+          ## Latest Ubuntu (without os-release on tag)
+          - imageTag: 8
+            context: openjdk-8/ubuntu/22.04
+          - imageTag: 8-ubuntu
+            context: openjdk-8/ubuntu/22.04
+          - imageTag: openjdk-8
+            context: openjdk-8/ubuntu/22.04
+          - imageTag: openjdk-8-ubuntu
+            context: openjdk-8/ubuntu/22.04
+          ## Ubuntu 22.04
+          - imageTag: 8-ubuntu-22
+            context: openjdk-8/ubuntu/22.04
+          - imageTag: 8-ubuntu-2204
+            context: openjdk-8/ubuntu/22.04
+          - imageTag: openjdk-8-ubuntu-2204
+            context: openjdk-8/ubuntu/22.04
+          ## Ubuntu 20.04
+          - imageTag: 8-ubuntu-20
+            context: openjdk-8/ubuntu/20.04
+          - imageTag: 8-ubuntu-2004
+            context: openjdk-8/ubuntu/20.04
+          - imageTag: openjdk-8-ubuntu-2004
+            context: openjdk-8/ubuntu/20.04
 
     uses: exoplatform/swf-scripts/.github/workflows/buildDockerImage.yml@master
     with:
