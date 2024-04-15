@@ -14,7 +14,7 @@ jobs:
           # JDK 21
           ## Ubuntu 24.04 (latest)
           - context: openjdk-21/ubuntu/24.04
-            imageTag: latest,21,21-ubuntu,21-ubuntu-24,21-ubuntu-2404,openjdk-21,openjdk-21-ubuntu,openjdk-21-ubuntu-22,openjdk-21-ubuntu-2404
+            imageTag: latest,21,21-ubuntu,21-ubuntu-24,21-ubuntu-2404,openjdk-21,openjdk-21-ubuntu,openjdk-21-ubuntu-24,openjdk-21-ubuntu-2404
           ## Ubuntu 22.04
           - context: openjdk-21/ubuntu/22.04
             imageTag: 21-ubuntu-22,21-ubuntu-2204,openjdk-21-ubuntu-22,openjdk-21-ubuntu-2204
