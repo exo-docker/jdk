@@ -12,13 +12,19 @@ jobs:
       matrix:
         include:
           # JDK 21
-          ## Ubuntu 22.04 (latest)
+          ## Ubuntu 24.04 (latest)
+          - context: openjdk-21/ubuntu/24.04
+            imageTag: latest,21,21-ubuntu,21-ubuntu-24,21-ubuntu-2404,openjdk-21,openjdk-21-ubuntu,openjdk-21-ubuntu-22,openjdk-21-ubuntu-2404
+          ## Ubuntu 22.04
           - context: openjdk-21/ubuntu/22.04
-            imageTag: latest,21,21-ubuntu,21-ubuntu-22,21-ubuntu-2204,openjdk-21,openjdk-21-ubuntu,openjdk-21-ubuntu-22,openjdk-21-ubuntu-2204
+            imageTag: 21-ubuntu-22,21-ubuntu-2204,openjdk-21-ubuntu-22,openjdk-21-ubuntu-2204
           # JDK 17
+          ## Ubuntu 24.04
+          - context: openjdk-17/ubuntu/24.04
+            imageTag: 17,17-ubuntu,17-ubuntu-24,17-ubuntu-2404,openjdk-17,openjdk-17-ubuntu,openjdk-17-ubuntu-24,openjdk-17-ubuntu-2404
           ## Ubuntu 22.04
           - context: openjdk-17/ubuntu/22.04
-            imageTag: 17,17-ubuntu,17-ubuntu-22,17-ubuntu-2204,openjdk-17,openjdk-17-ubuntu,openjdk-17-ubuntu-22,openjdk-17-ubuntu-2204
+            imageTag: 17-ubuntu-22,17-ubuntu-2204,openjdk-17-ubuntu-22,openjdk-17-ubuntu-2204
           ## Ubuntu 20.04
           - context: openjdk-17/ubuntu/20.04
             imageTag: 17-ubuntu-20,17-ubuntu-2004,openjdk-17-ubuntu-20,openjdk-17-ubuntu-2004
