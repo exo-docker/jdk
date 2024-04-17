@@ -10,27 +10,17 @@
 FROM  exoplatform/ubuntu:24.04
 LABEL maintainer="eXo Platform <docker@exoplatform.com>"
 
-ENV JDK_VERSION 17.0.10
 ENV JDK_MAJOR_VERSION 17
-ENV TEMURIN_SUFFIX 7
-
-ENV JDK_DOWNLOAD http://storage.exoplatform.org/public/java/jdk/openjdk/${JDK_VERSION}/openjdk-${JDK_VERSION}_linux-x64_bin.tar.gz
-
 
 # Install OpenJDK Java 17 SDK
-ENV JVM_DIR /usr/lib/jvm
-RUN mkdir -p "${JVM_DIR}"
-
-RUN wget -q --no-cookies --no-check-certificate \
-  -O "${DOWNLOAD_DIR}/openjdk-${JDK_VERSION}-linux-x64.tar.gz" "${JDK_DOWNLOAD}" \
-  && cd "${JVM_DIR}" \
-  && tar --no-same-owner -xzf "${DOWNLOAD_DIR}/openjdk-${JDK_VERSION}-linux-x64.tar.gz" \
-  && rm -f "${DOWNLOAD_DIR}/openjdk-${JDK_VERSION}-linux-x64.tar.gz" \
-  && mv "${JVM_DIR}/jdk-${JDK_VERSION}+${TEMURIN_SUFFIX}" "${JVM_DIR}/java-${JDK_VERSION}-openjdk-x64" \
-  && ln -s "${JVM_DIR}/java-${JDK_VERSION}-openjdk-x64" "${JVM_DIR}/java-${JDK_MAJOR_VERSION}-openjdk-x64"
-
-ADD java-x64.jinfo ${JVM_DIR}/.java-x64.jinfo
-RUN cat "${JVM_DIR}/.java-x64.jinfo" | grep -E '^(jre|jdk|hl)' | awk '{print "/usr/bin/" $2 " " $2 " " $3 " 30 \n"}' | xargs -t -n4 gosu root update-alternatives --install
-ENV JAVA_HOME ${JVM_DIR}/java-${JDK_MAJOR_VERSION}-openjdk-x64
+RUN apt-get -qq update && \
+    apt-get -qq -y install gnupg ca-certificates curl
+RUN curl -s https://repos.azul.com/azul-repo.key | gpg --dearmor -o /usr/share/keyrings/azul.gpg
+RUN echo "deb [signed-by=/usr/share/keyrings/azul.gpg] https://repos.azul.com/zulu/deb stable main" | tee /etc/apt/sources.list.d/zulu.list
+RUN apt-get -qq update && \
+    apt-get -qq -y install zulu${JDK_MAJOR_VERSION}-jdk
+RUN apt-get -qq -y autoremove && \
+    apt-get -qq -y clean && \
+    rm -rf /var/lib/apt/lists/*
 
 ENTRYPOINT ["/usr/local/bin/tini", "--", "/usr/bin/java"]

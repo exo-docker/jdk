@@ -28,13 +28,6 @@ jobs:
           ## Ubuntu 20.04
           - context: openjdk-17/ubuntu/20.04
             imageTag: 17-ubuntu-20,17-ubuntu-2004,openjdk-17-ubuntu-20,openjdk-17-ubuntu-2004
-          # JDK 14
-          ## Ubuntu 22.04
-          - context: openjdk-14/ubuntu/22.04
-            imageTag: 14,14-ubuntu,14-ubuntu-22,14-ubuntu-2204,openjdk-14,openjdk-14-ubuntu,openjdk-14-ubuntu-22,openjdk-14-ubuntu-2204
-          ## Ubuntu 20.04
-          - context: openjdk-14/ubuntu/20.04
-            imageTag: 14-ubuntu-20,14-ubuntu-2004,openjdk-14-ubuntu-20,openjdk-14-ubuntu-2004
           # JDK 11
           ## Ubuntu 22.04
           - context: openjdk-11/ubuntu/22.04
