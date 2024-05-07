@@ -5,6 +5,22 @@ on:
   workflow_dispatch:
 
 jobs:
+  check-available-zulu-jdks:
+    name: Check available Zulu JDKs
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check latest jdk versions
+        run: |
+          echo "Fetching latest versions of JDK (${jdk_list}):"
+          for major_jdk_version in ${jdk_list//,/ }; do 
+            latestversion=$(curl -fsSL -X GET "https://api.azul.com/metadata/v1/zulu/packages/?java_version=${major_jdk_version}&os=ubuntu&arch=amd&java_package_type=jdk&javafx_bundled=true&release_status=ga&availability_types=CA&certifications=tck&page=1&page_size=1"   -H "accept: application/json" | jq -r '.[].java_version | join(",")') 
+            [ ${major_jdk_version} -lt '10' ] && paddingspace=" " || paddingspace=
+            echo " - JDK ${paddingspace}${major_jdk_version}: ${latestversion}"
+          done
+          echo "Done" 
+        env:
+          jdk_list: 8,11,17,21
+  
   build-jdk-images:
     name: "Build JDK Images"
     strategy:
