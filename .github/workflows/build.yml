@@ -25,6 +25,11 @@ jobs:
   
   build-jdk-images:
     name: "Build JDK Images"
+    permissions:
+      id-token: write
+      packages: write
+      contents: read
+      attestations: write
     strategy:
       fail-fast: false
       matrix:
@@ -67,6 +72,7 @@ jobs:
       dockerFileContext: ${{ matrix.context }}
       dockerImageTag: ${{ matrix.imageTag }}
       signImage: true
+      attestImage: true
     secrets:
       DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
       DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
