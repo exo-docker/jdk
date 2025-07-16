@@ -14,7 +14,7 @@ jobs:
           echo "Fetching latest versions of JDK (${jdk_list}):"
           echo "### JDK Versions List:" >> $GITHUB_STEP_SUMMARY
           for major_jdk_version in ${jdk_list//,/ }; do 
-            latestversion=$(curl -fsSL -X GET "https://api.azul.com/metadata/v1/zulu/packages/?java_version=${major_jdk_version}&os=ubuntu&arch=amd&java_package_type=jdk&javafx_bundled=true&release_status=ga&availability_types=CA&certifications=tck&page=1&page_size=1"   -H "accept: application/json" | jq -r '.[].java_version | join(",")') 
+            latestversion=$(curl -fsSL -X GET "https://api.azul.com/metadata/v1/zulu/packages/?java_version=${major_jdk_version}&os=ubuntu&arch=amd&java_package_type=jdk&javafx_bundled=false&release_status=ga&availability_types=CA&certifications=tck&page=1&page_size=1"   -H "accept: application/json" | jq -r '.[].java_version | join(",")') 
             [ ${major_jdk_version} -lt '10' ] && paddingspace=" " || paddingspace=
             echo " - JDK ${paddingspace}${major_jdk_version}: $(echo ${latestversion} | sed 's/,/./g')"
             echo " - JDK ${paddingspace}${major_jdk_version}: $(echo ${latestversion} | sed 's/,/./g')" >> $GITHUB_STEP_SUMMARY
