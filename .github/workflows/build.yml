@@ -34,10 +34,14 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          # JDK 21
+          # JDK 25
           ## Ubuntu 24.04 (latest)
+          - context: openjdk-25/ubuntu/24.04
+            imageTag: latest,25,25-ubuntu,25-ubuntu-24,25-ubuntu-2404,openjdk-25,openjdk-25-ubuntu,openjdk-25-ubuntu-24,openjdk-25-ubuntu-2404
+          # JDK 21
+          ## Ubuntu 24.04
           - context: openjdk-21/ubuntu/24.04
-            imageTag: latest,21,21-ubuntu,21-ubuntu-24,21-ubuntu-2404,openjdk-21,openjdk-21-ubuntu,openjdk-21-ubuntu-24,openjdk-21-ubuntu-2404
+            imageTag: 21,21-ubuntu,21-ubuntu-24,21-ubuntu-2404,openjdk-21,openjdk-21-ubuntu,openjdk-21-ubuntu-24,openjdk-21-ubuntu-2404
           ## Ubuntu 22.04
           - context: openjdk-21/ubuntu/22.04
             imageTag: 21-ubuntu-22,21-ubuntu-2204,openjdk-21-ubuntu-22,openjdk-21-ubuntu-2204

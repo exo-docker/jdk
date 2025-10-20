@@ -5,7 +5,8 @@
 
 | JDK version                             | Docker tags                                                                         | Dockerfile                                                                       |
 |-----------------------------------------|----------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------|
-| openjdk-21 + Ubuntu 24.04 | `openjdk-21`, `openjdk-21-ubuntu`, `openjdk-21-ubuntu-24`, `openjdk-21-ubuntu-2404`,`latest`    | *[( openjdk-21/ubuntu/24.04/Dockerfile )](./openjdk-21/ubuntu/24.04/Dockerfile)* |
+| openjdk-25 + Ubuntu 24.04 | `openjdk-25`, `openjdk-25-ubuntu`, `openjdk-25-ubuntu-24`, `openjdk-25-ubuntu-2404`,`latest`    | *[( openjdk-25/ubuntu/24.04/Dockerfile )](./openjdk-25/ubuntu/24.04/Dockerfile)* |
+| openjdk-21 + Ubuntu 24.04 | `openjdk-21`, `openjdk-21-ubuntu`, `openjdk-21-ubuntu-24`, `openjdk-21-ubuntu-2404`    | *[( openjdk-21/ubuntu/24.04/Dockerfile )](./openjdk-21/ubuntu/24.04/Dockerfile)* |
 | openjdk-21 + Ubuntu 22.04 | `openjdk-21-ubuntu-22`, `openjdk-21-ubuntu-2204`                                                | *[( openjdk-21/ubuntu/22.04/Dockerfile )](./openjdk-21/ubuntu/22.04/Dockerfile)* |
 | openjdk-17 + Ubuntu 22.04 | `openjdk-17`, `openjdk-17-ubuntu`, `openjdk-17-ubuntu-22`, `openjdk-17-ubuntu-2204`    | *[( openjdk-17/ubuntu/22.04/Dockerfile )](./openjdk-17/ubuntu/22.04/Dockerfile)* |
 | openjdk-11 + Ubuntu 22.04 | `openjdk-11`, `openjdk-11-ubuntu`, `openjdk-11-ubuntu-22`, `openjdk-11-ubuntu-2204`            | *[( openjdk-11/ubuntu/22.04/Dockerfile )](./openjdk-11/ubuntu/22.04/Dockerfile)* |
