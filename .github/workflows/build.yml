@@ -75,6 +75,7 @@ jobs:
       - name: "Build and push Docker images"
         uses: exo-actions/buildDockerImage-action@v1
         with:
+          dockerImage: "exoplatform/jdk"
           dockerFileContext: ${{ matrix.context }}
           dockerImageTag: ${{ matrix.imageTag }}
           attestImage: true
