@@ -75,11 +75,7 @@ jobs:
       dockerImage: "exoplatform/jdk"
       dockerFileContext: ${{ matrix.context }}
       dockerImageTag: ${{ matrix.imageTag }}
-      signImage: true
       attestImage: true
     secrets:
       DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
       DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
-      DOCKER_PRIVATE_KEY_ID: ${{ secrets.DOCKER_PRIVATE_KEY_ID }}
-      DOCKER_PRIVATE_KEY: ${{ secrets.DOCKER_PRIVATE_KEY }}
-      DOCKER_PRIVATE_KEY_PASSPHRASE: ${{ secrets.DOCKER_PRIVATE_KEY_PASSPHRASE }}
