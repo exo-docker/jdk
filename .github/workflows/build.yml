@@ -25,6 +25,7 @@ jobs:
   
   build-jdk-images:
     name: "Build JDK Images"
+    runs-on: ubuntu-latest
     permissions:
       id-token: write
       packages: write
@@ -70,12 +71,12 @@ jobs:
           - context: openjdk-8/ubuntu/20.04
             imageTag: 8-ubuntu-20,8-ubuntu-2004,openjdk-8-ubuntu-20,openjdk-8-ubuntu-2004
 
-    uses: exoplatform/swf-scripts/.github/workflows/buildDockerImage.yml@master
-    with:
-      dockerImage: "exoplatform/jdk"
-      dockerFileContext: ${{ matrix.context }}
-      dockerImageTag: ${{ matrix.imageTag }}
-      attestImage: true
-    secrets:
-      DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
-      DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+    steps:
+      - name: "Build and push Docker images"
+        uses: exo-actions/buildDockerImage-action@v1
+        with:
+          dockerFileContext: ${{ matrix.context }}
+          dockerImageTag: ${{ matrix.imageTag }}
+          attestImage: true
+          DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+          DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
