@@ -3,25 +3,20 @@
 
 ## Supported tags and respective `Dockerfile` links <!-- omit in toc -->
 
-| JDK version                             | Docker tags                                                                         | Dockerfile                                                                       |
-|-----------------------------------------|----------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------|
-| openjdk-25 + Ubuntu 24.04 | `openjdk-25`, `openjdk-25-ubuntu`, `openjdk-25-ubuntu-24`, `openjdk-25-ubuntu-2404`,`latest`    | *[( openjdk-25/ubuntu/24.04/Dockerfile )](./openjdk-25/ubuntu/24.04/Dockerfile)* |
-| openjdk-21 + Ubuntu 24.04 | `openjdk-21`, `openjdk-21-ubuntu`, `openjdk-21-ubuntu-24`, `openjdk-21-ubuntu-2404`    | *[( openjdk-21/ubuntu/24.04/Dockerfile )](./openjdk-21/ubuntu/24.04/Dockerfile)* |
-| openjdk-21 + Ubuntu 22.04 | `openjdk-21-ubuntu-22`, `openjdk-21-ubuntu-2204`                                                | *[( openjdk-21/ubuntu/22.04/Dockerfile )](./openjdk-21/ubuntu/22.04/Dockerfile)* |
-| openjdk-17 + Ubuntu 22.04 | `openjdk-17`, `openjdk-17-ubuntu`, `openjdk-17-ubuntu-22`, `openjdk-17-ubuntu-2204`    | *[( openjdk-17/ubuntu/22.04/Dockerfile )](./openjdk-17/ubuntu/22.04/Dockerfile)* |
-| openjdk-11 + Ubuntu 22.04 | `openjdk-11`, `openjdk-11-ubuntu`, `openjdk-11-ubuntu-22`, `openjdk-11-ubuntu-2204`            | *[( openjdk-11/ubuntu/22.04/Dockerfile )](./openjdk-11/ubuntu/22.04/Dockerfile)* |
-| openjdk-17 + Ubuntu 24.04 | `openjdk-17`, `openjdk-17-ubuntu`, `openjdk-17-ubuntu-24`, `openjdk-17-ubuntu-2404`             | *[( openjdk-17/ubuntu/24.04/Dockerfile )](./openjdk-17/ubuntu/24.04/Dockerfile)* |
-| openjdk-17 + Ubuntu 22.04 | `openjdk-17-ubuntu-22`, `openjdk-17-ubuntu-2204`                                                | *[( openjdk-17/ubuntu/22.04/Dockerfile )](./openjdk-17/ubuntu/22.04/Dockerfile)* |
-| openjdk-17 + Ubuntu 20.04 | `openjdk-17-ubuntu-20`, `openjdk-17-ubuntu-2004`                                               | *[( openjdk-17/ubuntu/20.04/Dockerfile )](./openjdk-17/ubuntu/20.04/Dockerfile)* |
-| openjdk-11 + Ubuntu 20.04 | `openjdk-11`, `openjdk-11-ubuntu`, `openjdk-11-ubuntu-20`, `openjdk-11-ubuntu-2004`            | *[( openjdk-11/ubuntu/20.04/Dockerfile )](./openjdk-11/ubuntu/20.04/Dockerfile)* |
-| 8 ( 8u342 ) + Ubuntu 20.04              | `8`, `8-ubuntu`, `8-ubuntu-20`, `8-ubuntu-2004`                                              | *[( 8/ubuntu/20.04/Dockerfile )](./8/ubuntu/18.04/Dockerfile)*    
-| openjdk-11 + Ubuntu 18.04 | `openjdk-11`, `openjdk-11-ubuntu`, `openjdk-11-ubuntu-18`, `openjdk-11-ubuntu-1804`          | *[( openjdk-11/ubuntu/18.04/Dockerfile )](./openjdk-11/ubuntu/18.04/Dockerfile)* |
-| 8 ( 8u201 ) + Ubuntu 18.04              | `8`, `8-ubuntu`, `8-ubuntu-18`, `8-ubuntu-1804`                                              | *[( 8/ubuntu/18.04/Dockerfile )](./8/ubuntu/18.04/Dockerfile)*                   |
-| 8 ( 8u201 ) + Ubuntu 16.04              | `8-ubuntu-1604`, `8-ubuntu-16`                                                               | *[( 8/ubuntu/16.04/Dockerfile )](./8/ubuntu/16.04/Dockerfile)*     
-| openjdk-8 + Ubuntu 20.04    | `openjdk-8`, `openjdk-8-ubuntu`, `openjdk-8-ubuntu-20`, `openjdk-8-ubuntu-2004`              | *[( openjdk-8/ubuntu/20.04/Dockerfile )](./openjdk-8/ubuntu/20.04/Dockerfile)*   |
-| openjdk-8 + Ubuntu 18.04    | `openjdk-8`, `openjdk-8-ubuntu`, `openjdk-8-ubuntu-18`, `openjdk-8-ubuntu-1804`              | *[( openjdk-8/ubuntu/18.04/Dockerfile )](./openjdk-8/ubuntu/18.04/Dockerfile)*   |
-| 8 ( 8u201 ) + Ubuntu 18.04              | `8`, `8-ubuntu`, `8-ubuntu-18`, `8-ubuntu-1804`,                                             | *[( 8/ubuntu/18.04/Dockerfile )](./8/ubuntu/18.04/Dockerfile)*                   |
-| 8 ( 8u201 ) + Ubuntu 16.04              | `8-ubuntu-1604`, `8-ubuntu-16`                                                               | *[( 8/ubuntu/16.04/Dockerfile )](./8/ubuntu/16.04/Dockerfile)*                   |
+| JDK version                            | Docker tags                                                                                                                                        | Dockerfile                           |
+| -------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ |
+| **openjdk-25 + Ubuntu 26.04**          | `25-ubuntu-26`, `25-ubuntu-2604`, `openjdk-25-ubuntu-26`, `openjdk-25-ubuntu-2604`                                                                 | `openjdk-25/ubuntu/26.04/Dockerfile` |
+| **openjdk-25 + Ubuntu 24.04 (latest)** | `latest`, `25`, `25-ubuntu`, `25-ubuntu-24`, `25-ubuntu-2404`, `openjdk-25`, `openjdk-25-ubuntu`, `openjdk-25-ubuntu-24`, `openjdk-25-ubuntu-2404` | `openjdk-25/ubuntu/24.04/Dockerfile` |
+| **openjdk-21 + Ubuntu 26.04**          | `21-ubuntu-26`, `21-ubuntu-2604`, `openjdk-21-ubuntu-26`, `openjdk-21-ubuntu-2604`                                                                 | `openjdk-21/ubuntu/26.04/Dockerfile` |
+| **openjdk-21 + Ubuntu 24.04**          | `21`, `21-ubuntu`, `21-ubuntu-24`, `21-ubuntu-2404`, `openjdk-21`, `openjdk-21-ubuntu`, `openjdk-21-ubuntu-24`, `openjdk-21-ubuntu-2404`           | `openjdk-21/ubuntu/24.04/Dockerfile` |
+| **openjdk-21 + Ubuntu 22.04**          | `21-ubuntu-22`, `21-ubuntu-2204`, `openjdk-21-ubuntu-22`, `openjdk-21-ubuntu-2204`                                                                 | `openjdk-21/ubuntu/22.04/Dockerfile` |
+| **openjdk-17 + Ubuntu 24.04**          | `17`, `17-ubuntu`, `17-ubuntu-24`, `17-ubuntu-2404`, `openjdk-17`, `openjdk-17-ubuntu`, `openjdk-17-ubuntu-24`, `openjdk-17-ubuntu-2404`           | `openjdk-17/ubuntu/24.04/Dockerfile` |
+| **openjdk-17 + Ubuntu 22.04**          | `17-ubuntu-22`, `17-ubuntu-2204`, `openjdk-17-ubuntu-22`, `openjdk-17-ubuntu-2204`                                                                 | `openjdk-17/ubuntu/22.04/Dockerfile` |
+| **openjdk-17 + Ubuntu 20.04**          | `17-ubuntu-20`, `17-ubuntu-2004`, `openjdk-17-ubuntu-20`, `openjdk-17-ubuntu-2004`                                                                 | `openjdk-17/ubuntu/20.04/Dockerfile` |
+| **openjdk-11 + Ubuntu 22.04**          | `11`, `11-ubuntu`, `11-ubuntu-22`, `11-ubuntu-2204`, `openjdk-11`, `openjdk-11-ubuntu`, `openjdk-11-ubuntu-22`, `openjdk-11-ubuntu-2204`           | `openjdk-11/ubuntu/22.04/Dockerfile` |
+| **openjdk-11 + Ubuntu 20.04**          | `11-ubuntu-20`, `11-ubuntu-2004`, `openjdk-11-ubuntu-20`, `openjdk-11-ubuntu-2004`                                                                 | `openjdk-11/ubuntu/20.04/Dockerfile` |
+| **openjdk-8 + Ubuntu 22.04**           | `8`, `8-ubuntu`, `8-ubuntu-22`, `8-ubuntu-2204`, `openjdk-8`, `openjdk-8-ubuntu`, `openjdk-8-ubuntu-22`, `openjdk-8-ubuntu-2204`                   | `openjdk-8/ubuntu/22.04/Dockerfile`  |
+| **openjdk-8 + Ubuntu 20.04**           | `8-ubuntu-20`, `8-ubuntu-2004`, `openjdk-8-ubuntu-20`, `openjdk-8-ubuntu-2004`                                                                     | `openjdk-8/ubuntu/20.04/Dockerfile`  |
 
 - [Quick reference](#quick-reference)
 - [How to use this image](#how-to-use-this-image)
