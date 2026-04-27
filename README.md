@@ -18,6 +18,8 @@
 | **openjdk-8 + Ubuntu 22.04**           | `8`, `8-ubuntu`, `8-ubuntu-22`, `8-ubuntu-2204`, `openjdk-8`, `openjdk-8-ubuntu`, `openjdk-8-ubuntu-22`, `openjdk-8-ubuntu-2204`                   | `openjdk-8/ubuntu/22.04/Dockerfile`  |
 | **openjdk-8 + Ubuntu 20.04**           | `8-ubuntu-20`, `8-ubuntu-2004`, `openjdk-8-ubuntu-20`, `openjdk-8-ubuntu-2004`                                                                     | `openjdk-8/ubuntu/20.04/Dockerfile`  |
 
+> **Multi-Architecture Support**: Starting from Ubuntu 26.04 (Resolute Raccoon), images are built for both `linux/amd64` and `linux/arm64` architectures. This allows running these JDK images on Apple Silicon (M1/M2/M3), AWS Graviton, and other ARM64-based systems. Images based on Ubuntu 24.04 and earlier are amd64 only.
+
 - [Quick reference](#quick-reference)
 - [How to use this image](#how-to-use-this-image)
 
