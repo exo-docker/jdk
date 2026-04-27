@@ -22,6 +22,10 @@ RUN apt-get -qq update && \
 RUN apt-get -qq -y autoremove && \
     apt-get -qq -y clean && \
     rm -rf /var/lib/apt/lists/*
-ENV JAVA_HOME /usr/lib/jvm/zulu${JDK_MAJOR_VERSION}-ca-$(dpkg --print-architecture)
+
+# Create a symlink that points to the actual JDK location
+RUN ln -s /usr/lib/jvm/zulu${JDK_MAJOR_VERSION}-ca-$(dpkg --print-architecture) /usr/lib/jvm/zulu${JDK_MAJOR_VERSION}
+
+ENV JAVA_HOME /usr/lib/jvm/zulu${JDK_MAJOR_VERSION}
 
 ENTRYPOINT ["/usr/local/bin/tini", "--", "/usr/bin/java"]
