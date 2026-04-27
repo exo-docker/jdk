@@ -39,6 +39,7 @@ jobs:
           ## Ubuntu 26.04 (latest)
           - context: openjdk-25/ubuntu/26.04
             imageTag: latest,25,25-ubuntu,25-ubuntu-26,25-ubuntu-2604,openjdk-25,openjdk-25-ubuntu,openjdk-25-ubuntu-26,openjdk-25-ubuntu-2604
+            platforms: linux/arm64,linux/amd64
           ## Ubuntu 24.04
           - context: openjdk-25/ubuntu/24.04
             imageTag: 25-ubuntu-24,25-ubuntu-2404,openjdk-25-ubuntu-24,openjdk-25-ubuntu-2404
@@ -46,6 +47,7 @@ jobs:
           ## Ubuntu 26.04
           - context: openjdk-21/ubuntu/26.04
             imageTag: 21,21-ubuntu,21-ubuntu-26,21-ubuntu-2604,openjdk-21,openjdk-21-ubuntu,openjdk-21-ubuntu-26,openjdk-21-ubuntu-2604
+            platforms: linux/arm64,linux/amd64
           ## Ubuntu 24.04
           - context: openjdk-21/ubuntu/24.04
             imageTag: 21-ubuntu-24,21-ubuntu-2404,openjdk-21-ubuntu-24,openjdk-21-ubuntu-2404
@@ -84,6 +86,7 @@ jobs:
           dockerImage: "exoplatform/jdk"
           dockerFileContext: ${{ matrix.context }}
           dockerImageTag: ${{ matrix.imageTag }}
+          platforms: ${{ matrix.platforms }}
           attestImage: true
           DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
           DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
