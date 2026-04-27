@@ -22,6 +22,6 @@ RUN apt-get -qq update && \
 RUN apt-get -qq -y autoremove && \
     apt-get -qq -y clean && \
     rm -rf /var/lib/apt/lists/*
-ENV JAVA_HOME /usr/lib/jvm/zulu${JDK_MAJOR_VERSION}-ca-amd64
+ENV JAVA_HOME /usr/lib/jvm/zulu${JDK_MAJOR_VERSION}-ca-$(dpkg --print-architecture)
 
 ENTRYPOINT ["/usr/local/bin/tini", "--", "/usr/bin/java"]
